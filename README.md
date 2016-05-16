@@ -5,7 +5,7 @@ Home: http://nipy.org/nitime
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: Timeseries analysis for neuroscience data
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/nitime-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/nitime-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/nitime-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/nitime-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/nitime-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/nitime-feedstock/branch/master)
