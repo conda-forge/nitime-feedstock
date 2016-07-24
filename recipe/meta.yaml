@@ -33,6 +33,8 @@ test:
         - nitime.fmri
         - nitime.fmri.tests
         - nitime.tests
+    commands:
+        - conda inspect linkages -n _test nitime  # [linux]
 
 about:
     home: http://nipy.org/nitime
