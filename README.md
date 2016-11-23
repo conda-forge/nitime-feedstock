@@ -33,7 +33,6 @@ conda search nitime --channel conda-forge
 ```
 
 
-
 About conda-forge
 =================
 
