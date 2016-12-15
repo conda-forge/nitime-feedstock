@@ -6,7 +6,7 @@ package:
 
 source:
     fn: nitime-{{ version }}.tar.gz
-    url: https://pypi.python.org/packages/source/n/nitime/nitime-{{ version }}.tar.gz
+    url: https://pypi.io/packages/source/n/nitime/nitime-{{ version }}.tar.gz
     md5: 4055597dac1cede57ff9a16d609c9fe0
 
 build:
