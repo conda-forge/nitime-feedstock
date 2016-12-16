@@ -20,6 +20,7 @@ requirements:
         - cython
         - setuptools
     run:
+        - setuptools
         - python
         - numpy x.x
         - scipy
