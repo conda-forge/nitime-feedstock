@@ -1,4 +1,4 @@
-{% set version = "0.6" %}
+{% set version = "0.7" %}
 
 package:
     name: nitime
@@ -6,22 +6,27 @@ package:
 
 source:
     fn: nitime-{{ version }}.tar.gz
-    url: https://pypi.python.org/packages/source/n/nitime/nitime-{{ version }}.tar.gz
-    md5: 43d92863b8792a50336b40635999f909
+    url: https://pypi.io/packages/source/n/nitime/nitime-{{ version }}.tar.gz
+    md5: 4055597dac1cede57ff9a16d609c9fe0
 
 build:
     number: 0
-    script: python setup.py install
+    script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
     build:
         - python
         - numpy x.x
         - cython
+        - setuptools
     run:
+        - setuptools
         - python
         - numpy x.x
         - scipy
+        - matplotlib
+        - networkx
+        - nibabel
 
 test:
     imports:
