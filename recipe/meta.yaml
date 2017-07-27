@@ -1,50 +1,58 @@
 {% set version = "0.7" %}
 
 package:
-    name: nitime
-    version: {{ version }}
+  name: nitime
+  version: {{ version }}
 
 source:
-    fn: nitime-{{ version }}.tar.gz
-    url: https://pypi.io/packages/source/n/nitime/nitime-{{ version }}.tar.gz
-    md5: 4055597dac1cede57ff9a16d609c9fe0
+  url: https://pypi.io/packages/source/n/nitime/nitime-{{ version }}.tar.gz
+  sha256: 18bac8d62686f884f1ac8b8d4fdb3d644e38a8a6ece76073a576080bafcbc5e9
 
 build:
-    number: 0
-    script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 1
+  script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
-    build:
-        - python
-        - numpy x.x
-        - cython
-        - setuptools
-    run:
-        - setuptools
-        - python
-        - numpy x.x
-        - scipy
-        - matplotlib
-        - networkx
-        - nibabel
+  build:
+    - python
+    - setuptools
+    - cython
+    - numpy 1.7.*  # [py27]
+    - numpy 1.9.*  # [py35]
+    - numpy 1.11.*  # [py36]
+    - setuptools
+  run:
+    - python
+    - setuptools
+    - numpy >=1.7  # [py27]
+    - numpy >=1.9  # [py35]
+    - numpy >=1.11  # [py36]
+    - scipy
+    - matplotlib
+    - networkx
+    - nibabel
 
 test:
-    imports:
-        - nitime
-        - nitime.algorithms
-        - nitime.algorithms.tests
-        - nitime.analysis
-        - nitime.analysis.tests
-        - nitime.fmri
-        - nitime.fmri.tests
-        - nitime.tests
+  imports:
+    - nitime
+    - nitime.algorithms
+    - nitime.algorithms.tests
+    - nitime.analysis
+    - nitime.analysis.tests
+    - nitime.fmri
+    - nitime.fmri.tests
+    - nitime.tests
+  commands:
+    - conda inspect linkages -p $PREFIX nitime  # [not win]
+    - conda inspect objects -p $PREFIX nitime  # [osx]
 
 about:
-    home: http://nipy.org/nitime
-    license: BSD-3-Clause
-    summary: Timeseries analysis for neuroscience data
+  home: http://nipy.org/nitime
+  license: BSD 3-Clause
+  license_file: LICENSE
+  summary: 'Timeseries analysis for neuroscience data'
 
 extra:
-    recipe-maintainers:
-        - arokem
-        - ocefpaf
+  recipe-maintainers:
+    - arokem
+    - ocefpaf
