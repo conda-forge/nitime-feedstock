@@ -10,25 +10,20 @@ source:
 
 build:
   number: 2
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - {{ compiler('c') }}
   host:
     - python
-    - setuptools
+    - pip
     - cython
-    - numpy        # [py27]
-    - numpy        # [py35]
-    - numpy         # [py36]
-    - setuptools
+    - numpy
   run:
     - python
     - setuptools
-    - {{ pin_compatible('numpy') }}   # [py27]
-    - {{ pin_compatible('numpy') }}   # [py35]
-    - {{ pin_compatible('numpy') }}   # [py36]
+    - {{ pin_compatible('numpy') }}
     - scipy
     - matplotlib
     - networkx
@@ -44,9 +39,6 @@ test:
     - nitime.fmri
     - nitime.fmri.tests
     - nitime.tests
-  commands:
-    - conda inspect linkages -p $PREFIX nitime  # [not win]
-    - conda inspect objects -p $PREFIX nitime  # [osx]
 
 about:
   home: http://nipy.org/nitime
