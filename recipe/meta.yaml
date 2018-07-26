@@ -9,24 +9,26 @@ source:
   sha256: 18bac8d62686f884f1ac8b8d4fdb3d644e38a8a6ece76073a576080bafcbc5e9
 
 build:
-  number: 1
+  number: 2
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
     - setuptools
     - cython
-    - numpy 1.7.*  # [py27]
-    - numpy 1.9.*  # [py35]
-    - numpy 1.11.*  # [py36]
+    - numpy        # [py27]
+    - numpy        # [py35]
+    - numpy         # [py36]
     - setuptools
   run:
     - python
     - setuptools
-    - numpy >=1.7  # [py27]
-    - numpy >=1.9  # [py35]
-    - numpy >=1.11  # [py36]
+    - {{ pin_compatible('numpy') }}   # [py27]
+    - {{ pin_compatible('numpy') }}   # [py35]
+    - {{ pin_compatible('numpy') }}   # [py36]
     - scipy
     - matplotlib
     - networkx
