@@ -9,24 +9,21 @@ source:
   sha256: 18bac8d62686f884f1ac8b8d4fdb3d644e38a8a6ece76073a576080bafcbc5e9
 
 build:
-  number: 1
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 2
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
-    - setuptools
+    - pip
     - cython
-    - numpy 1.7.*  # [py27]
-    - numpy 1.9.*  # [py35]
-    - numpy 1.11.*  # [py36]
-    - setuptools
+    - numpy
   run:
     - python
     - setuptools
-    - numpy >=1.7  # [py27]
-    - numpy >=1.9  # [py35]
-    - numpy >=1.11  # [py36]
+    - {{ pin_compatible('numpy') }}
     - scipy
     - matplotlib
     - networkx
@@ -42,9 +39,6 @@ test:
     - nitime.fmri
     - nitime.fmri.tests
     - nitime.tests
-  commands:
-    - conda inspect linkages -p $PREFIX nitime  # [not win]
-    - conda inspect objects -p $PREFIX nitime  # [osx]
 
 about:
   home: http://nipy.org/nitime
