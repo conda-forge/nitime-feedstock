@@ -1,4 +1,4 @@
-{% set version = "0.7" %}
+{% set version = "0.8" %}
 
 package:
   name: nitime
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/nitime/nitime-{{ version }}.tar.gz
-  sha256: 18bac8d62686f884f1ac8b8d4fdb3d644e38a8a6ece76073a576080bafcbc5e9
+  sha256: 2390b94196bb5b7df6663311733ba21d35492200902ed5703215f268e224d02a
 
 build:
-  number: 1002
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
