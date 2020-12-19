@@ -1,4 +1,4 @@
-{% set version = "0.8.1" %}
+{% set version = "0.9" %}
 
 package:
   name: nitime
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/n/nitime/nitime-{{ version }}.tar.gz
-  sha256: 269eae522f613c9ca8c3d62b66074a76b40d9484f468b4b8525f7c9342e96341
+  sha256: 6e7d90adbb1fa942629bce2f1f9b6de53ea1dd8b0602582ef4608c88d4343874
 
 build:
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -44,7 +44,7 @@ about:
   home: http://nipy.org/nitime
   license: BSD 3-Clause
   license_file: LICENSE
-  summary: 'Timeseries analysis for neuroscience data'
+  summary: Timeseries analysis for neuroscience data
 
 extra:
   recipe-maintainers:
