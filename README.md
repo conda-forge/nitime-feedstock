@@ -3,11 +3,11 @@ About nitime
 
 Home: http://nipy.org/nitime
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nitime-feedstock/blob/master/LICENSE.txt)
 
-Summary: Timeseries analysis for neuroscience data
+Summary: Nitime: timeseries analysis for neuroscience data
 
 Current build status
 ====================
