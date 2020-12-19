@@ -1,50 +1,52 @@
+{% set name = "nitime" %}
 {% set version = "0.9" %}
 
+
 package:
-  name: nitime
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/n/nitime/nitime-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nitime-{{ version }}.tar.gz
   sha256: 6e7d90adbb1fa942629bce2f1f9b6de53ea1dd8b0602582ef4608c88d4343874
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: true   # [py2k]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - {{ compiler('c') }}
   host:
     - python
-    - pip
     - cython
     - numpy
+    - pip
   run:
     - python
+    - cython
     - setuptools
-    - {{ pin_compatible('numpy') }}
-    - scipy
     - matplotlib-base
     - networkx
     - nibabel
+    - scipy
+    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
     - nitime
     - nitime.algorithms
-    - nitime.algorithms.tests
-    - nitime.analysis
-    - nitime.analysis.tests
-    - nitime.fmri
-    - nitime.fmri.tests
-    - nitime.tests
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: http://nipy.org/nitime
-  license: BSD 3-Clause
+  summary: 'Nitime: timeseries analysis for neuroscience data'
+  license: BSD-3-Clause
   license_file: LICENSE
-  summary: Timeseries analysis for neuroscience data
 
 extra:
   recipe-maintainers:
