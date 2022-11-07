@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nitime-{{ version }}.tar.gz
-  sha256: 6e7d90adbb1fa942629bce2f1f9b6de53ea1dd8b0602582ef4608c88d4343874
+  url: https://github.com/nipy/nitime/archive/refs/tags/rel/{{ version }}.tar.gz
+  sha256: badf4b5b6940f339c39a2fa873b1dcb44e41f4294f72a0e1d163881a1f973a69
 
 build:
-  number: 3
+  number: 4
   skip: true   # [py2k]
   script: {{ PYTHON }} -m pip install . -vv
 
