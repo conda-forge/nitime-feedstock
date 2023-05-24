@@ -1,5 +1,5 @@
 {% set name = "nitime" %}
-{% set version = "0.9" %}
+{% set version = "0.10.1" %}
 
 
 package:
@@ -7,12 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/nipy/nitime/archive/refs/tags/rel/{{ version }}.tar.gz
-  sha256: badf4b5b6940f339c39a2fa873b1dcb44e41f4294f72a0e1d163881a1f973a69
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: "367a15ad2b7a3134dc36ea757beff5bf92681c261cc9cb901f8ac72f35c9b7e6"
 
 build:
-  number: 4
-  skip: true   # [py2k]
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -52,3 +51,4 @@ extra:
   recipe-maintainers:
     - arokem
     - ocefpaf
+    - effigies
