@@ -240,5 +240,6 @@ Feedstock Maintainers
 =====================
 
 * [@arokem](https://github.com/arokem/)
+* [@effigies](https://github.com/effigies/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 
