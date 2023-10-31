@@ -20,16 +20,16 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
+    - setuptools_scm
     - {{ compiler('c') }}
   host:
     - python
     - cython
     - numpy
+    - setuptools_scm
     - pip
   run:
     - python
-    - cython
-    - setuptools
     - matplotlib-base
     - networkx
     - nibabel
