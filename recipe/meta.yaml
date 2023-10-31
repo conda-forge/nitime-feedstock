@@ -40,10 +40,13 @@ test:
   imports:
     - nitime
     - nitime.algorithms
+    - nitime._utils  # Verify the compiled module is available
   commands:
     - pip check
+    - pytest --pyargs nitime
   requires:
     - pip
+    - pytest
 
 about:
   home: http://nipy.org/nitime
