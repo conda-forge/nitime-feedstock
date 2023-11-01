@@ -1,5 +1,5 @@
 {% set name = "nitime" %}
-{% set version = "0.10.1" %}
+{% set version = "0.10.2" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: "367a15ad2b7a3134dc36ea757beff5bf92681c261cc9cb901f8ac72f35c9b7e6"
+  sha256: "342696afb66a2f55d5d107d40fee3e627df73757023f7de26f9a09f753ad24b5"
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,16 +20,16 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
+    - setuptools_scm
     - {{ compiler('c') }}
   host:
     - python
     - cython
     - numpy
+    - setuptools_scm
     - pip
   run:
     - python
-    - cython
-    - setuptools
     - matplotlib-base
     - networkx
     - nibabel
@@ -40,10 +40,13 @@ test:
   imports:
     - nitime
     - nitime.algorithms
+    - nitime._utils  # Verify the compiled module is available
   commands:
     - pip check
+    - pytest --pyargs nitime
   requires:
     - pip
+    - pytest
 
 about:
   home: http://nipy.org/nitime
