@@ -11,7 +11,7 @@ source:
   sha256: "342696afb66a2f55d5d107d40fee3e627df73757023f7de26f9a09f753ad24b5"
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -22,6 +22,7 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - setuptools_scm
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - cython
@@ -34,7 +35,6 @@ requirements:
     - networkx
     - nibabel
     - scipy
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
