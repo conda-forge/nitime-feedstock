@@ -13,6 +13,7 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [ppc64le]
 
 requirements:
   build:
@@ -22,6 +23,7 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - setuptools_scm
     - {{ compiler('c') }}
+    - {{ stdlib('c') }}
   host:
     - python
     - cython
