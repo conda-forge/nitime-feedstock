@@ -23,6 +23,7 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - setuptools_scm
+    - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
     - python
