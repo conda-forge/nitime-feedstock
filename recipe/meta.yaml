@@ -1,5 +1,5 @@
 {% set name = "nitime" %}
-{% set version = "0.10.2" %}
+{% set version = "0.11" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: "342696afb66a2f55d5d107d40fee3e627df73757023f7de26f9a09f753ad24b5"
+  sha256: "e087bc7ee93d08a767ffae13b027cdd8da36754d7a202a4145661eaeaa85d3fd"
 
 build:
   number: 0
@@ -22,6 +22,7 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - setuptools_scm
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - cython
