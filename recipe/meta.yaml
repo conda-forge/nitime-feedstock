@@ -1,5 +1,5 @@
 {% set name = "nitime" %}
-{% set version = "0.11" %}
+{% set version = "0.12" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: "e087bc7ee93d08a767ffae13b027cdd8da36754d7a202a4145661eaeaa85d3fd"
+  sha256: "6c0ddf55d390243590b72c1ddc88ad8144223c55d0525b05a9e66cc4cbde5e91"
 
 build:
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
