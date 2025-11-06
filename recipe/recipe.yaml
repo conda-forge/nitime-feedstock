@@ -15,6 +15,8 @@ source:
 build:
   number: 0
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    version_independent: ${{ match(abi, '==abi3') }}
 
 requirements:
   build:
@@ -28,7 +30,9 @@ requirements:
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
   host:
-    - python
+    - if: match(abi, '==abi3')
+      then: python-abi3
+    - python ${{ python_min }}.*
     - cython
     - numpy
     - setuptools_scm
@@ -50,10 +54,30 @@ tests:
   - requirements:
       run:
         - pip
-        - pytest
+        - if: match(abi, '==abi3')
+          then: abi3audit
     script:
       - pip check
+      - if: "not win and match(abi, '==abi3')"
+        then: abi3audit site-packages/nitime/_utils.abi3.so -s -v --assume-minimum-abi3 ${{ python_min }}
+      - if: win and match(abi, '==abi3')
+        then: abi3audit site-packages/nitime/_utils.pyd -s -v --assume-minimum-abi3 ${{ python_min }}
+  # Pytest with build version
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+        - pytest
+    script:
       - pytest --pyargs nitime
+  # For ABI3, pytest with latest version
+  - if: match(abi, '==abi3')
+    then:
+      requirements:
+        run:
+          - python
+          - pytest
+      script:
+        - pytest --pyargs nitime
 
 about:
   summary: "Nitime: timeseries analysis for neuroscience data"
