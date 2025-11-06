@@ -1,0 +1,70 @@
+schema_version: 1
+
+context:
+  name: nitime
+  version: 0.12
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 6c0ddf55d390243590b72c1ddc88ad8144223c55d0525b05a9e66cc4cbde5e91
+
+build:
+  number: 1
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then: python
+    - if: build_platform != target_platform
+      then: cross-python_${{ target_platform }}
+    - if: build_platform != target_platform
+      then: cython
+    - if: build_platform != target_platform
+      then: numpy
+    - setuptools_scm
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+  host:
+    - python
+    - cython
+    - numpy
+    - setuptools_scm
+    - setuptools
+    - pip
+  run:
+    - python
+    - matplotlib-base
+    - networkx
+    - nibabel
+    - scipy
+
+tests:
+  - python:
+      imports:
+        - nitime
+        - nitime.algorithms
+        - nitime._utils
+  - requirements:
+      run:
+        - pip
+        - pytest
+    script:
+      - pip check
+      - pytest --pyargs nitime
+
+about:
+  summary: "Nitime: timeseries analysis for neuroscience data"
+  license: BSD-3-Clause
+  license_file: LICENSE
+  homepage: http://nipy.org/nitime
+
+extra:
+  recipe-maintainers:
+    - arokem
+    - ocefpaf
+    - effigies
