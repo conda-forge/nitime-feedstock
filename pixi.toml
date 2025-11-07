@@ -25,126 +25,54 @@ description = "List contents of all packages found in rattler-build build direct
 [tasks.build]
 cmd = "rattler-build build --recipe recipe"
 description = "Build nitime-feedstock directly (without setup scripts), no particular variant specified"
-[tasks."build-linux_64_python3.10.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.10.____cpython.yaml"
-description = "Build nitime-feedstock with variant linux_64_python3.10.____cpython directly (without setup scripts)"
-[tasks."inspect-linux_64_python3.10.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.10.____cpython.yaml"
-description = "List contents of nitime-feedstock packages built for variant linux_64_python3.10.____cpython"
-[tasks."build-linux_64_python3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.11.____cpython.yaml"
-description = "Build nitime-feedstock with variant linux_64_python3.11.____cpython directly (without setup scripts)"
-[tasks."inspect-linux_64_python3.11.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.11.____cpython.yaml"
-description = "List contents of nitime-feedstock packages built for variant linux_64_python3.11.____cpython"
-[tasks."build-linux_64_python3.12.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.12.____cpython.yaml"
-description = "Build nitime-feedstock with variant linux_64_python3.12.____cpython directly (without setup scripts)"
-[tasks."inspect-linux_64_python3.12.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.12.____cpython.yaml"
-description = "List contents of nitime-feedstock packages built for variant linux_64_python3.12.____cpython"
-[tasks."build-linux_64_python3.13.____cp313"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.13.____cp313.yaml"
-description = "Build nitime-feedstock with variant linux_64_python3.13.____cp313 directly (without setup scripts)"
-[tasks."inspect-linux_64_python3.13.____cp313"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.13.____cp313.yaml"
-description = "List contents of nitime-feedstock packages built for variant linux_64_python3.13.____cp313"
-[tasks."build-linux_64_python3.14.____cp314"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.14.____cp314.yaml"
-description = "Build nitime-feedstock with variant linux_64_python3.14.____cp314 directly (without setup scripts)"
-[tasks."inspect-linux_64_python3.14.____cp314"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.14.____cp314.yaml"
-description = "List contents of nitime-feedstock packages built for variant linux_64_python3.14.____cp314"
-[tasks."build-osx_64_python3.10.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.10.____cpython.yaml"
-description = "Build nitime-feedstock with variant osx_64_python3.10.____cpython directly (without setup scripts)"
-[tasks."inspect-osx_64_python3.10.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.10.____cpython.yaml"
-description = "List contents of nitime-feedstock packages built for variant osx_64_python3.10.____cpython"
-[tasks."build-osx_64_python3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.11.____cpython.yaml"
-description = "Build nitime-feedstock with variant osx_64_python3.11.____cpython directly (without setup scripts)"
-[tasks."inspect-osx_64_python3.11.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.11.____cpython.yaml"
-description = "List contents of nitime-feedstock packages built for variant osx_64_python3.11.____cpython"
-[tasks."build-osx_64_python3.12.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.12.____cpython.yaml"
-description = "Build nitime-feedstock with variant osx_64_python3.12.____cpython directly (without setup scripts)"
-[tasks."inspect-osx_64_python3.12.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.12.____cpython.yaml"
-description = "List contents of nitime-feedstock packages built for variant osx_64_python3.12.____cpython"
-[tasks."build-osx_64_python3.13.____cp313"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.13.____cp313.yaml"
-description = "Build nitime-feedstock with variant osx_64_python3.13.____cp313 directly (without setup scripts)"
-[tasks."inspect-osx_64_python3.13.____cp313"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.13.____cp313.yaml"
-description = "List contents of nitime-feedstock packages built for variant osx_64_python3.13.____cp313"
-[tasks."build-osx_64_python3.14.____cp314"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.14.____cp314.yaml"
-description = "Build nitime-feedstock with variant osx_64_python3.14.____cp314 directly (without setup scripts)"
-[tasks."inspect-osx_64_python3.14.____cp314"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.14.____cp314.yaml"
-description = "List contents of nitime-feedstock packages built for variant osx_64_python3.14.____cp314"
-[tasks."build-osx_arm64_python3.10.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.10.____cpython.yaml"
-description = "Build nitime-feedstock with variant osx_arm64_python3.10.____cpython directly (without setup scripts)"
-[tasks."inspect-osx_arm64_python3.10.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.10.____cpython.yaml"
-description = "List contents of nitime-feedstock packages built for variant osx_arm64_python3.10.____cpython"
-[tasks."build-osx_arm64_python3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.11.____cpython.yaml"
-description = "Build nitime-feedstock with variant osx_arm64_python3.11.____cpython directly (without setup scripts)"
-[tasks."inspect-osx_arm64_python3.11.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.11.____cpython.yaml"
-description = "List contents of nitime-feedstock packages built for variant osx_arm64_python3.11.____cpython"
-[tasks."build-osx_arm64_python3.12.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.12.____cpython.yaml"
-description = "Build nitime-feedstock with variant osx_arm64_python3.12.____cpython directly (without setup scripts)"
-[tasks."inspect-osx_arm64_python3.12.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.12.____cpython.yaml"
-description = "List contents of nitime-feedstock packages built for variant osx_arm64_python3.12.____cpython"
-[tasks."build-osx_arm64_python3.13.____cp313"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.13.____cp313.yaml"
-description = "Build nitime-feedstock with variant osx_arm64_python3.13.____cp313 directly (without setup scripts)"
-[tasks."inspect-osx_arm64_python3.13.____cp313"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.13.____cp313.yaml"
-description = "List contents of nitime-feedstock packages built for variant osx_arm64_python3.13.____cp313"
-[tasks."build-osx_arm64_python3.14.____cp314"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.14.____cp314.yaml"
-description = "Build nitime-feedstock with variant osx_arm64_python3.14.____cp314 directly (without setup scripts)"
-[tasks."inspect-osx_arm64_python3.14.____cp314"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.14.____cp314.yaml"
-description = "List contents of nitime-feedstock packages built for variant osx_arm64_python3.14.____cp314"
-[tasks."build-win_64_python3.10.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_python3.10.____cpython.yaml"
-description = "Build nitime-feedstock with variant win_64_python3.10.____cpython directly (without setup scripts)"
-[tasks."inspect-win_64_python3.10.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_python3.10.____cpython.yaml"
-description = "List contents of nitime-feedstock packages built for variant win_64_python3.10.____cpython"
-[tasks."build-win_64_python3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_python3.11.____cpython.yaml"
-description = "Build nitime-feedstock with variant win_64_python3.11.____cpython directly (without setup scripts)"
-[tasks."inspect-win_64_python3.11.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_python3.11.____cpython.yaml"
-description = "List contents of nitime-feedstock packages built for variant win_64_python3.11.____cpython"
-[tasks."build-win_64_python3.12.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_python3.12.____cpython.yaml"
-description = "Build nitime-feedstock with variant win_64_python3.12.____cpython directly (without setup scripts)"
-[tasks."inspect-win_64_python3.12.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_python3.12.____cpython.yaml"
-description = "List contents of nitime-feedstock packages built for variant win_64_python3.12.____cpython"
-[tasks."build-win_64_python3.13.____cp313"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_python3.13.____cp313.yaml"
-description = "Build nitime-feedstock with variant win_64_python3.13.____cp313 directly (without setup scripts)"
-[tasks."inspect-win_64_python3.13.____cp313"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_python3.13.____cp313.yaml"
-description = "List contents of nitime-feedstock packages built for variant win_64_python3.13.____cp313"
-[tasks."build-win_64_python3.14.____cp314"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_python3.14.____cp314.yaml"
-description = "Build nitime-feedstock with variant win_64_python3.14.____cp314 directly (without setup scripts)"
-[tasks."inspect-win_64_python3.14.____cp314"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_python3.14.____cp314.yaml"
-description = "List contents of nitime-feedstock packages built for variant win_64_python3.14.____cp314"
+[tasks."build-linux_64_abiabi3python_min3.11"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_abiabi3python_min3.11.yaml"
+description = "Build nitime-feedstock with variant linux_64_abiabi3python_min3.11 directly (without setup scripts)"
+[tasks."inspect-linux_64_abiabi3python_min3.11"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_abiabi3python_min3.11.yaml"
+description = "List contents of nitime-feedstock packages built for variant linux_64_abiabi3python_min3.11"
+[tasks."build-linux_64_abicp310python_min3.10"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_abicp310python_min3.10.yaml"
+description = "Build nitime-feedstock with variant linux_64_abicp310python_min3.10 directly (without setup scripts)"
+[tasks."inspect-linux_64_abicp310python_min3.10"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_abicp310python_min3.10.yaml"
+description = "List contents of nitime-feedstock packages built for variant linux_64_abicp310python_min3.10"
+[tasks."build-osx_64_abiabi3python_min3.11"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_abiabi3python_min3.11.yaml"
+description = "Build nitime-feedstock with variant osx_64_abiabi3python_min3.11 directly (without setup scripts)"
+[tasks."inspect-osx_64_abiabi3python_min3.11"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_abiabi3python_min3.11.yaml"
+description = "List contents of nitime-feedstock packages built for variant osx_64_abiabi3python_min3.11"
+[tasks."build-osx_64_abicp310python_min3.10"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_abicp310python_min3.10.yaml"
+description = "Build nitime-feedstock with variant osx_64_abicp310python_min3.10 directly (without setup scripts)"
+[tasks."inspect-osx_64_abicp310python_min3.10"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_abicp310python_min3.10.yaml"
+description = "List contents of nitime-feedstock packages built for variant osx_64_abicp310python_min3.10"
+[tasks."build-osx_arm64_abiabi3python_min3.11"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_abiabi3python_min3.11.yaml"
+description = "Build nitime-feedstock with variant osx_arm64_abiabi3python_min3.11 directly (without setup scripts)"
+[tasks."inspect-osx_arm64_abiabi3python_min3.11"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_abiabi3python_min3.11.yaml"
+description = "List contents of nitime-feedstock packages built for variant osx_arm64_abiabi3python_min3.11"
+[tasks."build-osx_arm64_abicp310python_min3.10"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_abicp310python_min3.10.yaml"
+description = "Build nitime-feedstock with variant osx_arm64_abicp310python_min3.10 directly (without setup scripts)"
+[tasks."inspect-osx_arm64_abicp310python_min3.10"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_abicp310python_min3.10.yaml"
+description = "List contents of nitime-feedstock packages built for variant osx_arm64_abicp310python_min3.10"
+[tasks."build-win_64_abiabi3python_min3.11"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_abiabi3python_min3.11.yaml"
+description = "Build nitime-feedstock with variant win_64_abiabi3python_min3.11 directly (without setup scripts)"
+[tasks."inspect-win_64_abiabi3python_min3.11"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_abiabi3python_min3.11.yaml"
+description = "List contents of nitime-feedstock packages built for variant win_64_abiabi3python_min3.11"
+[tasks."build-win_64_abicp310python_min3.10"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_abicp310python_min3.10.yaml"
+description = "Build nitime-feedstock with variant win_64_abicp310python_min3.10 directly (without setup scripts)"
+[tasks."inspect-win_64_abicp310python_min3.10"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_abicp310python_min3.10.yaml"
+description = "List contents of nitime-feedstock packages built for variant win_64_abicp310python_min3.10"
 
 [feature.smithy.dependencies]
 conda-smithy = "*"
