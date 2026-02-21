@@ -41,6 +41,34 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_aarch64_abiabi3python_min3.11</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=685&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nitime-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_abiabi3python_min3.11" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_abicp310python_min3.10</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=685&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nitime-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_abicp310python_min3.10" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_abiabi3python_min3.11</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=685&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nitime-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_abiabi3python_min3.11" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_abicp310python_min3.10</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=685&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nitime-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_abicp310python_min3.10" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64_abiabi3python_min3.11</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=685&branchName=main">
