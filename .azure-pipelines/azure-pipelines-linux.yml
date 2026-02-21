@@ -16,6 +16,22 @@ jobs:
         CONFIG: linux_64_abicp310python_min3.10
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_aarch64_abiabi3python_min3.11:
+        CONFIG: linux_aarch64_abiabi3python_min3.11
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma9
+      linux_aarch64_abicp310python_min3.10:
+        CONFIG: linux_aarch64_abicp310python_min3.10
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma9
+      linux_ppc64le_abiabi3python_min3.11:
+        CONFIG: linux_ppc64le_abiabi3python_min3.11
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le:alma9
+      linux_ppc64le_abicp310python_min3.10:
+        CONFIG: linux_ppc64le_abicp310python_min3.10
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le:alma9
   timeoutInMinutes: 360
   variables: {}
 
